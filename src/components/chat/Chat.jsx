@@ -24,7 +24,11 @@ const Chat = ({ children }) => {
  * @returns {React.JSX.Element} El componente de encabezado del chat renderizado.
  */
 Chat.Header = ({ children }) => {
-  return <div className="position-absolute start-0 top-0">{children}</div>;
+  return (
+    <div className="position-fixed start-0 top-0 w-100">
+      <div className="hstack justify-content-between p-2">{children}</div>
+    </div>
+  );
 };
 
 /**
@@ -36,7 +40,9 @@ Chat.Body = ({ children }) => {
   return (
     <div style={{ paddingBottom: '14vh' }}>
       <div className="row">
-        <div className="col-5 mx-auto">{children}</div>
+        <div className="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mx-auto">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -53,7 +59,7 @@ Chat.Footer = ({ onSubmit, children }) => {
   return (
     <div className="position-fixed start-0 bottom-0 w-100">
       <div className="row">
-        <div className="col-5 mx-auto">
+        <div className="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mx-auto">
           <div className="position-relative pb-1">
             <div className="position-absolute start-0 bottom-0 w-100 h-75 bg-body z-n1"></div>
             <form className="position-relative" onSubmit={onSubmit}>
