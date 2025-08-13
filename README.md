@@ -1,6 +1,6 @@
-# Frontend para Aplicación Web de Técnicos
+# Frontend de Chatbot Contextual con RAG y Ollama
 
-En conjunto, este frontend complementa el backend para brindar una solución completa y escalable, enfocada en mejorar la eficiencia operativa y la trazabilidad de las actividades realizadas por los técnicos, asegurando una gestión robusta y segura de las evidencias.
+Experiencia de chat moderna y responsiva para interactuar con un backend inteligente basado en LangChain y Ollama. El sistema aprovecha la tecnología RAG (Retrieval-Augmented Generation) para entregar respuestas precisas, contextualizadas y alineadas a una base de conocimiento personalizada.
 
 ![Vite](https://img.shields.io/badge/Vite-6.x-9463f7?logo=vite)
 ![React](https://img.shields.io/badge/React-19.x-blue?logo=react)
