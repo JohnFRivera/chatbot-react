@@ -1,5 +1,13 @@
 import { useRef } from 'react';
 
+/**
+ * Un componente de campo de entrada de texto (`textarea`) con auto-ajuste de altura y capitalización de la primera letra.
+ *
+ * @param {Object} props - Propiedades del componente.
+ * @param {any} props.value - El valor actual del `textarea`.
+ * @param {(e: React.ChangeEvent<HTMLTextAreaElement>) => void} props.onChange - La función que se llama cuando el valor del `textarea` cambia.
+ * @returns {React.JSX.Element} El componente de entrada de texto renderizado.
+ */
 const InputField = ({ value, onChange }) => {
   const ref = useRef(null);
 

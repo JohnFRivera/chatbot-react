@@ -8,6 +8,11 @@ import {
 } from '@/components/chat';
 import { useChat } from '@/hooks';
 
+/**
+ * Un componente de página principal para una interfaz de chat.
+ *
+ * @returns {React.JSX.Element} El componente de página del chat renderizado.
+ */
 const ChatPage = () => {
   const {
     messages,

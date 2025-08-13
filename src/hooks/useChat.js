@@ -1,5 +1,18 @@
 import { useState } from 'react';
 
+/**
+ * Un custom hook para gestionar la lógica de un componente de chat.
+ *
+ * @returns {{
+ * messages: Array<{ type: 'question' | 'answer', text: string }>,
+ * form: { question: string },
+ * loading: boolean,
+ * error: string | null,
+ * handleSubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void>,
+ * handleCloseAlert: () => void,
+ * handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+ * }} Un objeto con los estados y las funciones para el componente de chat.
+ */
 const useChat = () => {
   const [messages, setMessages] = useState([]);
   const [form, setForm] = useState({ question: '' });
@@ -8,8 +21,11 @@ const useChat = () => {
   const chatContainer = document.getElementById('chat-container');
 
   /**
-   * Evento de enviar formulario.
-   * @param {React.FormEvent} e - Evento
+   * Manejador asíncrono para el envío de un formulario en un chat.
+   *
+   * @async
+   * @param {React.FormEvent<HTMLFormElement>} e - El evento de envío del formulario.
+   * @returns {Promise<void>} No devuelve un valor directamente, pero realiza acciones asíncronas.
    */
   const handleSubmit = async (e) => {
     try {
@@ -53,13 +69,14 @@ const useChat = () => {
   };
 
   /**
-   * Evento para cerrar alerta.
+   * Un manejador de eventos para cerrar o ocultar una alerta.
    */
   const handleCloseAlert = () => setError(null);
 
   /**
-   * Evento cuando una entrada de texto cambia.
-   * @param {React.InputEvent} e - Evento
+   * Un manejador de eventos genérico para actualizar el estado de un formulario.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>} e - El evento de cambio del elemento del formulario.
    */
   const handleChange = (e) => {
     const { name, value } = e.target;

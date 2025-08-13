@@ -1,3 +1,11 @@
+/**
+ * Un botón de envío que muestra un estado de carga y puede ser deshabilitado.
+ *
+ * @param {Object} props - Propiedades del componente.
+ * @param {boolean} props.disabled - Indica si el botón debe estar deshabilitado.
+ * @param {boolean} props.loading - Indica si se debe mostrar el estado de carga (spinner).
+ * @returns {React.JSX.Element} El componente de botón de envío renderizado.
+ */
 const SendButton = ({ disabled, loading }) => {
   return (
     <button

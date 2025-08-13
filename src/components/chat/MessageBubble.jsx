@@ -1,3 +1,10 @@
+/**
+ * Componente que representa una burbuja de mensaje de usuario en una conversación.
+ *
+ * @param {Object} props - Propiedades del componente.
+ * @param {any} props.message - El texto que se mostrará dentro de la burbuja del mensaje.
+ * @returns {React.JSX.Element} El componente de burbuja de mensaje renderizado.
+ */
 const MessageBubble = ({ message }) => {
   return (
     <div className="hstack justify-content-end py-4">
