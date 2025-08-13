@@ -45,15 +45,16 @@ Experiencia de chat moderna y responsiva para interactuar con un backend intelig
     │       ├── MessageBubble.jsx       # Burbuja de mensaje del remitente
     │       ├── MessageText.jsx         # Texto de respuesta
     │       ├── SendButton.jsx          # Botón para enviar mensajes
-    │       └── Sidebar.jsx             # Panel lateral con opciones y contactos
+    │       ├── Sidebar.jsx             # Panel lateral con opciones y contactos
     │       └── Spinner.jsx             # Indicador de carga
     ├── hooks/
     │   ├── index.js                    # Exporta hooks personalizados
-    │   └── useAuth.js                  # Hook para manejar autenticación y sesión
-    │   └── useChat.js                  # Lógica personalizada del chat
+    │   ├── useAuth.js                  # Hook para manejar autenticación y sesión
+    │   ├── useChat.js                  # Lógica personalizada del chat
+    │   └── useOutsideClick.js          # Hook para detectar clics fuera de un elemento
     ├── pages/
     │   ├── AuthPage.js                 # Página de inicio de sesión / registro
-    │   └── ChatPage.js                 # Página que renderiza la vista de chat
+    │   ├── ChatPage.js                 # Página que renderiza la vista de chat
     │   └── index.js                    # Exporta páginas
     ├── App.jsx
     └── main.jsx
