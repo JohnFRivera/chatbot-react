@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 /**
  * Un componente de campo de entrada de texto (`textarea`) con auto-ajuste de altura y capitalización de la primera letra.
@@ -27,15 +27,25 @@ const InputField = ({ value, onChange }) => {
   };
 
   /**
-   * Evento al textarea cambiar de valor.
-   * @param {React.InputEvent} e - Evento
+   * Ajustar tamaño del `textarea`.
    */
-  const handleChange = (e) => {
-    onChange && onChange(e);
+  const adjustSize = () => {
     const textarea = ref.current;
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
   };
+
+  /**
+   * Evento al `textarea` cambiar de valor.
+   * @param {React.InputEvent} e - Evento
+   */
+  const handleChange = (e) => {
+    onChange && onChange(e);
+    adjustSize();
+  };
+
+  // Ajustar tamaño al renderizar componente.
+  useEffect(() => adjustSize(), []);
 
   return (
     <textarea
