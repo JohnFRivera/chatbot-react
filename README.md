@@ -8,13 +8,13 @@ Experiencia de chat moderna y responsiva para interactuar con un backend intelig
 
 ## Tabla de contenidos
 
-- [Tecnologías](#tecnologías)
-- [Requisitos previos](#requisitos-previos)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Instalación](#instalación)
-- [Ejecución](#ejecución)
-- [Autor](#autor)
-- [Licencia](#licencia)
+1. [Tecnologías](#tecnologías)
+2. [Requisitos previos](#requisitos-previos)
+3. [Estructura del proyecto](#estructura-del-proyecto)
+4. [Instalación](#instalación)
+5. [Ejecución](#ejecución)
+6. [Autor](#autor)
+7. [Licencia](#licencia)
 
 ## Tecnologías
 
