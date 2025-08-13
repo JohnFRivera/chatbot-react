@@ -21,6 +21,7 @@ Experiencia de chat moderna y responsiva para interactuar con un backend intelig
 - **Vite** para proporcionar un entorno de desarrollo rápido y moderno con recarga instantánea y construcción optimizada del proyecto.
 - **React** para construir la interfaz de usuario del frontend de manera declarativa, modular y eficiente.
 - **Bootstrap** para aplicar estilos predefinidos y crear una interfaz responsive y coherente rápidamente.
+- **Bootstrap Icons** para incorporar íconos visuales consistentes y ligeros en la interfaz de usuario.
 
 ## Requisitos previos
 
@@ -34,20 +35,26 @@ Experiencia de chat moderna y responsiva para interactuar con un backend intelig
 ├── public/                             # Archivos estáticos públicos
 └── src/
     ├── components/
-    │   ├── layout/
-    │   │   ├── Chat.jsx                # Vista principal del chat
-    │   │   └── index.js                # Exporta componentes de layout
-    │   └── ui/
+    │   ├── auth/
+    │   └── chat/
+    │       ├── ActionsMenu.jsx         # Menú de acciones disponibles en el chat
     │       ├── Alert.jsx               # Mensaje de alerta visual
+    │       ├── Chat.jsx                # Vista principal del chat
     │       ├── index.js                # Exporta componentes UI
     │       ├── InputField.jsx          # Campo de entrada de texto
     │       ├── MessageBubble.jsx       # Burbuja de mensaje del remitente
     │       ├── MessageText.jsx         # Texto de respuesta
     │       ├── SendButton.jsx          # Botón para enviar mensajes
+    │       └── Sidebar.jsx             # Panel lateral con opciones y contactos
     │       └── Spinner.jsx             # Indicador de carga
     ├── hooks/
     │   ├── index.js                    # Exporta hooks personalizados
+    │   └── useAuth.js                  # Hook para manejar autenticación y sesión
     │   └── useChat.js                  # Lógica personalizada del chat
+    ├── pages/
+    │   ├── AuthPage.js                 # Página de inicio de sesión / registro
+    │   └── ChatPage.js                 # Página que renderiza la vista de chat
+    │   └── index.js                    # Exporta páginas
     ├── App.jsx
     └── main.jsx
 ```
