@@ -3,6 +3,11 @@ import { useRef } from 'react';
 const InputField = ({ value, onChange }) => {
   const ref = useRef(null);
 
+  /**
+   * Capitalizar solo la primer litra de un texto.
+   * @param {string} text - Texto de entrada
+   * @returns {string} Texto capitalizado
+   */
   const capitalize = (text) => {
     if (!text || typeof text !== 'string') return text; // Si no es texto válido, lo devuelve tal cual
     // Verificar si la primera letra ya es mayúscula
@@ -13,6 +18,10 @@ const InputField = ({ value, onChange }) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+  /**
+   * Evento al textarea cambiar de valor.
+   * @param {React.InputEvent} e - Evento
+   */
   const handleChange = (e) => {
     onChange && onChange(e);
     const textarea = ref.current;
@@ -24,7 +33,7 @@ const InputField = ({ value, onChange }) => {
     <textarea
       ref={ref}
       name="question"
-      className="form-control border-secondary-subtle rounded-4 overflow-hidden shadow-sm ps-3 py-3"
+      className="form-control bg-body-tertiary border-secondary-subtle rounded-4 overflow-hidden shadow-sm ps-3 py-3"
       style={{ resize: 'none', paddingRight: '3.5rem' }}
       placeholder="Pregunta lo que quieras"
       rows={1}

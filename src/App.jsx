@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Chat } from './components/layout';
 import {
   Alert,
@@ -18,6 +19,20 @@ function App() {
     handleCloseAlert,
     handleChange,
   } = useChat();
+
+  useEffect(() => {
+    // Detecta la preferencia del usuario
+    const userPrefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    const htmlElement = document.documentElement;
+
+    // Establece el atributo data-bs-theme en el elemento <html>
+    htmlElement.setAttribute(
+      'data-bs-theme',
+      userPrefersDark ? 'dark' : 'light'
+    );
+  }, []);
 
   return (
     <Chat>
