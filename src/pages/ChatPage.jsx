@@ -1,11 +1,11 @@
-import { Chat } from '@/components/layout';
 import {
   Alert,
+  Chat,
   InputField,
   MessageBubble,
   MessageText,
   SendButton,
-} from '@/components/ui';
+} from '@/components/chat';
 import { useChat } from '@/hooks';
 
 const ChatPage = () => {
