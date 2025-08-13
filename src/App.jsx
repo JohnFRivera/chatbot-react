@@ -3,17 +3,29 @@ import { ChatPage } from '@/pages';
 
 function App() {
   useEffect(() => {
-    // Detecta la preferencia del usuario
-    const userPrefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
+    // Crea el media query
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const htmlElement = document.documentElement;
 
-    // Establece el atributo data-bs-theme en el elemento <html>
-    htmlElement.setAttribute(
-      'data-bs-theme',
-      userPrefersDark ? 'dark' : 'light'
-    );
+    // Función para actualizar el tema
+    const applyTheme = (isDark) => {
+      htmlElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
+    };
+
+    // Establece el tema inicial
+    applyTheme(mediaQuery.matches);
+
+    // Escucha los cambios
+    const handleChange = (event) => {
+      applyTheme(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    // Limpia el listener al desmontar
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
   }, []);
 
   return (
