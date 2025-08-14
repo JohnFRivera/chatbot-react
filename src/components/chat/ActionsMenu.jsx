@@ -33,13 +33,15 @@ const ActionsMenu = ({ ref, show, onToggle, children }) => {
  *
  * @param {Object} props - Propiedades del componente.
  * @param {'action'|'delete'} props.variant - El estilo del botón, que corresponde a los colores de Bootstrap.
+ * @param {boolean} props.disabled - Indica si el botón debe estar deshabilitado.
  * @param {(e: React.MouseEvent<HTMLButtonElement>) => void} props.onClick - Función que se ejecuta al hacer clic en el botón.
  * @returns {React.JSX.Element} El componente de menú de acciones renderizado.
  */
-ActionsMenu.Button = ({ variant = 'action', onClick, children }) => {
+ActionsMenu.Button = ({ variant = 'action', disabled, onClick, children }) => {
   return (
     <button
       className={`btn btn-${variant} rounded-4 text-nowrap pe-4`}
+      disabled={disabled}
       onClick={onClick}
     >
       {children}
