@@ -1,3 +1,5 @@
+/* ActionsMenu.jsx */
+
 .btn-menu {
   --bs-btn-color: var(--bs-body-color);
   --bs-btn-bg: var(--bs-body-bg);
@@ -14,6 +16,8 @@
   --bs-btn-disabled-bg: var(--bs-body-bg);
   --bs-btn-disabled-border-color: var(--bs-body-bg);
 }
+
+/* Default ActionsMenu.Button */
 
 .btn-action {
   --bs-btn-color: var(--bs-body-color);
@@ -32,22 +36,43 @@
   --bs-btn-disabled-border-color: var(--bs-tertiary-bg);
 }
 
-.btn-delete {
+/* Delete ActionsMenu.Button */
+
+:root[data-bs-theme='light'] .btn-delete {
+  --bs-btn-color: var(--bs-danger);
+  --bs-btn-bg: var(--bs-tertiary-bg);
+  --bs-btn-border-color: var(--bs-tertiary-bg);
+  --bs-btn-hover-color: var(--bs-danger);
+  --bs-btn-hover-bg: var(--bs-secondary-bg);
+  --bs-btn-hover-border-color: var(--bs-secondary-bg);
+  --bs-btn-focus-shadow-rgb: 66, 70, 73;
+  --bs-btn-active-color: var(--bs-danger);
+  --bs-btn-active-bg: var(--bs-secondary-bg);
+  --bs-btn-active-border-color: var(--bs-secondary-bg);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--bs-danger);
+  --bs-btn-disabled-bg: var(--bs-tertiary-bg);
+  --bs-btn-disabled-border-color: var(--bs-tertiary-bg);
+}
+
+:root[data-bs-theme='dark'] .btn-delete {
   --bs-btn-color: var(--bs-danger-text-emphasis);
   --bs-btn-bg: var(--bs-tertiary-bg);
   --bs-btn-border-color: var(--bs-tertiary-bg);
   --bs-btn-hover-color: var(--bs-danger-text-emphasis);
-  --bs-btn-hover-bg: #33262b;
-  --bs-btn-hover-border-color: #33262b;
+  --bs-btn-hover-bg: rgba(var(--bs-danger-rgb), 0.11);
+  --bs-btn-hover-border-color: rgba(var(--bs-danger-rgb), 0.11);
   --bs-btn-focus-shadow-rgb: 66, 70, 73;
   --bs-btn-active-color: var(--bs-danger-text-emphasis);
-  --bs-btn-active-bg: #33262b;
-  --bs-btn-active-border-color: #33262b;
+  --bs-btn-active-bg: rgba(var(--bs-danger-rgb), 0.11);
+  --bs-btn-active-border-color: rgba(var(--bs-danger-rgb), 0.11);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: var(--bs-danger-text-emphasis);
   --bs-btn-disabled-bg: var(--bs-tertiary-bg);
   --bs-btn-disabled-border-color: var(--bs-tertiary-bg);
 }
+
+/* SendButton.jsx */
 
 :root[data-bs-theme='light'] .btn-send {
   --bs-btn-color: #fff;
